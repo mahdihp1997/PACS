@@ -1,0 +1,200 @@
+.study-viewer-container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.viewer-header .back-button {
+  padding: 0.5rem 1rem;
+  background: #e2e8f0;
+  color: #2d3748;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.viewer-header .back-button:hover {
+  background: #cbd5e0;
+}
+
+.study-info h2 {
+  color: #2d3748;
+  font-size: 1.3rem;
+}
+
+.study-info p {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.viewer-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.series-sidebar {
+  width: 280px;
+  border-right: 2px solid #e2e8f0;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.series-sidebar h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.series-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.series-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.series-item:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+}
+
+.series-item.active {
+  border-color: #667eea;
+  background: #edf2f7;
+}
+
+.series-icon {
+  font-size: 1.5rem;
+}
+
+.series-details {
+  flex: 1;
+}
+
+.series-details strong {
+  color: #2d3748;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.series-details p {
+  color: #718096;
+  font-size: 0.85rem;
+  margin: 0.1rem 0;
+}
+
+.series-details small {
+  color: #a0aec0;
+  font-size: 0.75rem;
+}
+
+.viewer-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.viewer-tools button {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.viewer-tools button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.viewer-tools button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.image-counter {
+  padding: 0.5rem 1rem;
+  background: #edf2f7;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.tool-separator {
+  width: 2px;
+  height: 30px;
+  background: #e2e8f0;
+  margin: 0 0.5rem;
+}
+
+.viewer-canvas-container {
+  flex: 1;
+  position: relative;
+  background: #000;
+}
+
+.image-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: white;
+}
+
+.cornerstone-element {
+  width: 100%;
+  height: 100%;
+}
+
+.image-info {
+  padding: 0.75rem 1rem;
+  background: #2d3748;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.image-info p {
+  margin: 0;
+}
